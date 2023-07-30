@@ -239,6 +239,20 @@
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
+
+	.one-plans {
+		&__container {
+			gap: 2rem;
+		}
+		&__wrap {
+			flex-direction: column;
+		}
+
+		&__block {
+			padding: 1rem 0;
+			margin: 1rem 0;
+		}
+	}
 }
 
 @include media-width($sm) {
@@ -483,6 +497,24 @@
 	.plans {
 		&__wrapper {
 			grid-template-columns: 1fr;
+		}
+	}
+	.one-plans {
+		&__container {
+			gap: 2rem;
+			grid-template-columns: 1fr;
+		}
+
+		&__info {
+			order: 2;
+		}
+		&__wrap {
+			flex-direction: column;
+		}
+
+		&__block {
+			padding: 1rem 0;
+			margin: 1rem 0;
 		}
 	}
 }

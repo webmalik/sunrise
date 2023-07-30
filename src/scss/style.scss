@@ -1280,4 +1280,108 @@
 	}
 }
 
+.one-plans {
+	padding-top: 7.5rem;
+
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 7rem;
+		margin-bottom: 8.87rem;
+	}
+
+	&__info {
+	}
+
+	&__button {
+		padding: 1rem;
+		color: $white_color;
+		font-family: $font-family;
+		font-size: 1.125rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__block {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+		margin: 1rem 5rem 1rem 0;
+		padding: 0 0rem 1rem 0;
+		&.flex-block {
+			display: flex;
+			align-items: center;
+			gap: 2.75rem;
+		}
+
+		.plans__info {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	&__title {
+		color: $black_color;
+		font-family: $font-family;
+		font-size: 1.625rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-bottom: 0.5rem;
+	}
+
+	&__invest {
+		text-align: left;
+	}
+
+	&__prize {
+		color: #5b5b5b;
+		font-family: $font-family;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		gap: 1.25rem;
+	}
+
+	&__form {
+		input {
+			padding: 1rem 1.5rem;
+			outline: none;
+			border-radius: 0.5rem;
+			border: 2px solid rgba(0, 0, 0, 0.17);
+			color: rgba(0, 0, 0, 1);
+			font-family: $font-family;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+		}
+		input[type="submit"] {
+			margin-top: 2.25rem;
+			width: 100%;
+			color: $white_color;
+			text-align: center;
+			font-family: $font-family;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			cursor: pointer;
+		}
+	}
+
+	&__image {
+		max-width: 100%;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
 @import "_media";
