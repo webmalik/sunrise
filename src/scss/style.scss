@@ -1384,4 +1384,144 @@
 	}
 }
 
+.steps {
+	padding-top: 10.63rem;
+	background-image: url("../img/promo-background.png");
+	background-repeat: no-repeat;
+	background-size: 30%;
+	background-position: top -3rem right;
+	&__title {
+		color: $black_color;
+		font-family: $font-family;
+		font-size: 3.25rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		padding-bottom: 1rem;
+	}
+
+	&__icon {
+		margin-bottom: 1.62rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__wrapper {
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		margin-bottom: 7.47rem;
+	}
+
+	&__item {
+		&:nth-child(odd) {
+			position: relative;
+			left: 1px;
+			border-right: 1px solid #d3d3d3;
+			text-align: right;
+			.steps__image {
+				display: flex;
+				justify-content: flex-end;
+				flex-direction: column;
+			}
+			.steps__date {
+				position: relative;
+				margin: 0 0.5rem 0 auto;
+				display: inline-flex;
+
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					right: -0.56rem;
+					width: 0.56rem;
+					height: 1px;
+					background-color: #d3d3d3;
+				}
+			}
+
+			.steps__image {
+				text-align: left;
+			}
+		}
+		&:nth-child(even) {
+			position: relative;
+			border-left: 1px solid #d3d3d3;
+			.steps__date {
+				position: relative;
+				margin: 0 auto 0 0.5rem;
+				display: inline-flex;
+
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					left: -0.56rem;
+					width: 0.56rem;
+					height: 1px;
+					background-color: #d3d3d3;
+				}
+			}
+		}
+	}
+
+	&__date {
+		padding: 0.69rem 1.62rem;
+		border-radius: 0.5rem;
+		border: 1px solid #d3d3d3;
+		color: $black_color;
+		font-family: $font-family;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+
+		&.opacity {
+			opacity: 0;
+		}
+	}
+
+	&__image {
+		max-width: 23rem;
+		display: flex;
+		flex-direction: column;
+		margin: 4rem auto;
+		gap: 1rem;
+		iframe {
+			height: 18rem;
+		}
+		iframe,
+		img {
+			border-radius: 1rem;
+			overflow: hidden;
+			max-width: 100%;
+		}
+	}
+
+	&__desc {
+		color: $black_color;
+		font-family: $font-family;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+
+	&__start {
+		color: $black_color;
+		font-family: $font-family;
+		font-size: 1.625rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+}
+
 @import "_media";
