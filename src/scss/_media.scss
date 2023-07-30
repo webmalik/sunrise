@@ -223,6 +223,12 @@
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
+
+	.contacts {
+		&__wrapper {
+			gap: 2rem;
+		}
+	}
 }
 
 @include media-width($sm) {
@@ -452,6 +458,15 @@
 	.gallery {
 		&__wrapper {
 			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.contacts {
+		padding-top: 2rem;
+		&__wrapper {
+			grid-template-columns: 1fr;
+		}
+		&__title {
+			margin-bottom: 0;
 		}
 	}
 }
