@@ -77,9 +77,30 @@
 		padding: 1rem 1.5rem 1rem 1rem;
 		font-style: normal;
 		font-weight: 500;
+		display: flex;
+		align-items: center;
 		line-height: normal;
 		border-radius: 0.5rem;
 		border: 2px solid rgba(0, 0, 0, 0.17);
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			background-color: $black_color;
+			color: $white_color;
+
+			svg path {
+				fill: $white_color;
+			}
+		}
+
+		&.active {
+			background-color: $black_color;
+			color: $white_color;
+
+			svg path {
+				fill: $white_color;
+			}
+		}
 	}
 }
 .dropdown {
@@ -1622,6 +1643,67 @@
 				opacity: 1;
 			}
 		}
+	}
+}
+
+.modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: -100rem;
+	height: 100%;
+	margin: auto;
+	z-index: 2;
+	transition: all 0.5s ease-in-out;
+
+	&.active {
+		top: 0;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0rem;
+		height: 100%;
+		margin: auto;
+		background-color: $black_color;
+		opacity: 0.2;
+		z-index: 1;
+	}
+
+	&__wrapper {
+		position: relative;
+		border-radius: 1rem;
+		border: 2px solid rgba(34, 22, 4, 0.05);
+		background: #fff;
+		padding: 1.5rem 1.5rem 2.5rem;
+		z-index: 2;
+	}
+
+	&__title {
+		color: $black_color;
+		font-family: $font-family;
+		font-size: 1.125rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		margin-bottom: 1.5rem;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__button {
+		background-color: $black_color;
+		outline: none;
+		border: none;
 	}
 }
 

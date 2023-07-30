@@ -244,6 +244,37 @@ export function nav_genplan() {
 	changeImages();
 }
 
+export function toggleModal() {
+	const modalButton = document.getElementById("modal");
+	const modal = document.querySelector(".modal");
+
+	function closeModal() {
+		modalButton.classList.remove("active");
+		modal.classList.remove("active");
+	}
+
+	modalButton.addEventListener("click", function (event) {
+		event.preventDefault();
+		modalButton.classList.add("active");
+		modal.classList.add("active");
+	});
+
+	// Закриття модального вікна при кліку на темний фон (modal::before)
+	modal.addEventListener("click", function (event) {
+		if (event.target === modal) {
+			closeModal();
+		}
+	});
+
+	// Закриття модального вікна при кліку на кнопку закриття (modal__button)
+	const closeButton = document.querySelector(".modal__button");
+	if (closeButton) {
+		closeButton.addEventListener("click", function () {
+			closeModal();
+		});
+	}
+}
+
 export function pageNav() {
 	const headerLinks = $('.header__link');
 

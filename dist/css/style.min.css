@@ -428,9 +428,26 @@ a {
   padding: 1rem 1.5rem 1rem 1rem;
   font-style: normal;
   font-weight: 500;
+  display: flex;
+  align-items: center;
   line-height: normal;
   border-radius: 0.5rem;
   border: 2px solid rgba(0, 0, 0, 0.17);
+  transition: all 0.3s ease-in-out;
+}
+.header__button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.header__button:hover svg path {
+  fill: #ffffff;
+}
+.header__button.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+.header__button.active svg path {
+  fill: #ffffff;
 }
 
 .dropdown__list {
@@ -1798,6 +1815,61 @@ a {
   max-width: 100%;
   max-height: max-content;
   opacity: 1;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: -100rem;
+  height: 100%;
+  margin: auto;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+.modal.active {
+  top: 0;
+}
+.modal::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0rem;
+  height: 100%;
+  margin: auto;
+  background-color: #000000;
+  opacity: 0.2;
+  z-index: 1;
+}
+.modal__wrapper {
+  position: relative;
+  border-radius: 1rem;
+  border: 2px solid rgba(34, 22, 4, 0.05);
+  background: #fff;
+  padding: 1.5rem 1.5rem 2.5rem;
+  z-index: 2;
+}
+.modal__title {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1.5rem;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+.modal__button {
+  background-color: #000000;
+  outline: none;
+  border: none;
 }
 
 @media (min-width: 992px) {
