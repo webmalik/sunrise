@@ -1338,6 +1338,37 @@ a {
   .about__list {
     grid-template-columns: repeat(2, 1fr);
   }
+  .about__gallery {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .about__margin {
+    margin-top: 2rem;
+  }
+  .about__bg {
+    padding-top: 2rem;
+  }
+  .about__image-1 {
+    width: 100%;
+  }
+  .about__image-1 img {
+    width: 100%;
+    height: auto;
+  }
+  .about__image-2 {
+    width: 100%;
+  }
+  .about__image-2 img {
+    width: 100%;
+    height: auto;
+  }
+  .about__image-3 {
+    width: 100%;
+  }
+  .about__image-3 img {
+    width: 100%;
+    height: auto;
+  }
   .apartments__title {
     font-size: 1.3rem;
     margin: 3rem 0 2rem;

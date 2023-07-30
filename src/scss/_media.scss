@@ -111,6 +111,40 @@
 		&__list {
 			grid-template-columns: repeat(2, 1fr);
 		}
+		&__gallery {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		&__margin {
+			margin-top: 2rem;
+		}
+
+		&__bg {
+			padding-top: 2rem;
+		}
+
+		&__image-1 {
+			width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&__image-2 {
+			width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&__image-3 {
+			width: 100%;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
 	}
 	.apartments {
 		&__title {
