@@ -1,3 +1,4 @@
 /node_modules
 /gulp/config/dataFTP.js
 .env
+.vscode

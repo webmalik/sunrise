@@ -113,6 +113,20 @@
 }
 
 .main {
+	position: relative;
+	&__bg {
+		position: absolute;
+		top: 15rem;
+		left: 3rem;
+		z-index: -1;
+	}
+
+	&__slider-bg {
+		position: absolute;
+		right: 7rem;
+		top: 0rem;
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -163,6 +177,7 @@
 	}
 
 	&__slider {
+		position: relative;
 		border-radius: 1rem;
 		overflow: hidden;
 		max-height: 45rem;
@@ -226,7 +241,7 @@
 				position: absolute;
 				top: 0;
 				bottom: 0;
-				right: 4rem;
+				right: 2.5rem;
 				background-image: url("../img/down.svg");
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -237,7 +252,7 @@
 		select {
 			position: relative;
 			display: flex;
-			width: 20rem;
+			width: 15rem;
 			padding: 1rem 0rem;
 			justify-content: center;
 			gap: 0.5rem;
@@ -341,6 +356,64 @@
 		gap: 2.88rem;
 	}
 
+	&__promo-img {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		gap: 6rem;
+	}
+
+	&__promo-img-reverce {
+		grid-template-columns: 2fr 3fr;
+		gap: 6rem;
+	}
+
+	&__margin {
+		margin-top: 10.5rem;
+	}
+
+	&__header {
+		color: $black_color;
+		font-family: $font-family;
+		font-size: 3.25rem;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+
+	&__flex-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.06rem;
+	}
+
+	&__flex-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.19rem;
+
+		ul {
+			list-style: disc;
+			padding-left: 1rem;
+
+			li {
+				color: $black_color;
+				font-family: $font-family;
+				font-size: 1rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+		}
+	}
+
+	&__bg {
+		padding-top: 10.62rem;
+		background-image: url("../img/promo-background.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: top -3rem right;
+	}
+
 	&__image {
 		border-radius: 1rem;
 		overflow: hidden;
@@ -352,6 +425,9 @@
 		img {
 			object-fit: contain;
 			object-position: center;
+			//max-width: 100%;
+			width: auto;
+			height: 100%;
 		}
 	}
 
@@ -372,6 +448,20 @@
 		letter-spacing: 0.08125rem;
 	}
 
+	&__title-bootom {
+		padding-top: 1rem;
+	}
+
+	&__image-1 {
+		max-height: 22rem;
+	}
+	&__image-2 {
+		max-height: 18rem;
+	}
+	&__image-3 {
+		max-height: 30rem;
+	}
+
 	&__text {
 		color: $black_color;
 		font-family: $font-family;
@@ -390,6 +480,18 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	&__gallery {
+		margin-top: 4.19rem;
+		margin-bottom: 5.84rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.31rem;
+		overflow: hidden;
+		img {
+			max-width: 100%;
+		}
 	}
 
 	&__icon {
@@ -709,7 +811,7 @@
 
 	&__wrapper {
 		position: relative;
-		height: 15rem;
+		height: 18rem;
 		overflow-x: auto;
 	}
 

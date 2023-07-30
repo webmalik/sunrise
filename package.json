@@ -14,11 +14,13 @@
 	"author": "WebMaLik",
 	"license": "ISC",
 	"devDependencies": {
+		"@fancyapps/ui": "^5.0.20",
 		"aos": "latest",
 		"browser-sync": "latest",
 		"css-loader": "^6.8.1",
 		"del": "latest",
 		"dotenv": "^16.3.1",
+		"fancybox": "^3.0.1",
 		"fs": "latest",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",

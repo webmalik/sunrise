@@ -1,6 +1,8 @@
 import $ from "jquery";
 import Swiper from "swiper";
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 
 import 'swiper/css';
@@ -120,6 +122,23 @@ export function tabs() {
 	// Додаємо обробник події для кожного посилання табу
 	tabLinks.forEach(link => {
 		link.addEventListener('click', switchTab);
+	});
+}
+
+export function about_gallery() {
+
+	Fancybox.bind('[data-fancybox="documents"]', {
+		toolbar: "auto",
+		loop: true,
+		animationEffect: "zoom-in-out",
+		transitionEffect: "fade",
+		buttons: ["zoom", "slideShow", "fullScreen", "thumbs", "close"],
+		Thumbs: {
+			hideOnClose: true,
+		},
+		touch: {
+			vertical: false,
+		},
 	});
 }
 
