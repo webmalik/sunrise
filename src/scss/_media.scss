@@ -1,0 +1,424 @@
+@include media-width($md, "min") {
+	.header {
+		&__item {
+			&:hover .dropdown__list {
+				display: flex;
+				max-height: max-content;
+				transition: all 0.5s ease-in-out;
+
+				& .dropdown__item {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}
+
+@include media-width($md) {
+	.container {
+		padding: 0 2rem;
+	}
+	.header {
+		&__logo {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			z-index: 2;
+		}
+		&__burger {
+			display: block;
+		}
+
+		&__nav {
+			position: absolute;
+			top: -30rem;
+			flex-direction: column;
+			align-content: center;
+			left: -1rem;
+			right: -1rem;
+			border-radius: 0rem 0rem 0.5rem 0.5rem;
+			background: $white_color;
+			box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+			gap: 1rem;
+			padding: 5rem 1rem 1rem 1rem;
+			z-index: 1;
+			transition: all 0.3s ease-in-out;
+
+			&.active {
+				top: 0;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+
+		&__dropdown {
+			&.active > .dropdown__list {
+				max-height: 10rem;
+			}
+		}
+
+		&__list {
+			flex-direction: column;
+			gap: 0;
+		}
+
+		&__item {
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+	.dropdown {
+		&__list {
+			position: relative;
+			padding: 0;
+			top: 0;
+			display: flex;
+			max-height: 0;
+			overflow: hidden;
+			box-shadow: none;
+			transition: all 0.5s ease-in-out;
+		}
+
+		&__item {
+			a {
+				justify-content: center;
+			}
+			font-size: 1rem;
+		}
+	}
+	.main {
+		&__container {
+			grid-template-columns: 1fr;
+		}
+
+		&__info {
+			gap: 1rem;
+		}
+
+		&__header {
+			text-align: center;
+		}
+	}
+
+	.about {
+		&__container {
+			margin-top: 4rem;
+		}
+		&__promo {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+		&__list {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	.apartments {
+		&__title {
+			font-size: 1.3rem;
+			margin: 3rem 0 2rem;
+		}
+		&__block {
+			a {
+				span {
+					font-size: 1.2rem;
+				}
+			}
+			&.close {
+				&::after {
+					padding: 0 1.5rem;
+				}
+			}
+		}
+	}
+	.apartments {
+		.turn {
+			&__block {
+				padding: 1rem 0;
+				gap: 0.6rem;
+			}
+			&__wrapper {
+				.turn__cursor {
+					bottom: -6.8rem;
+				}
+			}
+		}
+	}
+	.plan {
+		&__wrapper {
+			margin-top: 8rem;
+		}
+		&__label {
+			max-width: 2rem;
+			left: 2rem;
+		}
+
+		&__text {
+			h4 {
+				font-size: 1rem;
+			}
+			span {
+				font-size: 0.8rem;
+			}
+		}
+		&__cursor {
+			max-width: 2rem;
+		}
+	}
+	.tabs {
+		margin-top: 2rem;
+		&__header {
+			padding: 0;
+		}
+	}
+	.record {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	.footer-contacts {
+		&__wrapper {
+			gap: 2rem;
+		}
+
+		&__map {
+			min-height: 20rem;
+		}
+	}
+}
+
+@include media-width($sm) {
+	.container {
+		padding: 0 1rem;
+	}
+	.form {
+		&__container {
+			flex-direction: column;
+			gap: 1rem;
+
+			.select__wrapper {
+				&::after {
+					right: 2rem;
+				}
+			}
+			select {
+				width: 100%;
+			}
+		}
+
+		&__button {
+			padding: 1rem 0rem;
+		}
+	}
+	.main {
+		&__container {
+			grid-template-columns: 1fr;
+		}
+
+		&__info {
+			gap: 1rem;
+		}
+
+		&__title {
+			font-size: 2.5rem;
+		}
+
+		&__subtitle {
+			font-size: 1.3rem;
+		}
+
+		&__slider {
+			max-width: 100%;
+		}
+
+		&__contacts {
+			flex-direction: column;
+			justify-content: center;
+			margin: 1rem auto;
+			width: 100%;
+			gap: 1rem;
+		}
+
+		&__social {
+			flex-direction: column;
+			gap: 1rem;
+		}
+	}
+	.swiper-button-next {
+		width: 1.5rem !important;
+		height: 1.5rem !important;
+		padding: 0.5rem;
+
+		svg {
+			padding-left: 0;
+		}
+	}
+	.swiper-button-prev {
+		width: 1.5rem !important;
+		height: 1.5rem !important;
+		padding: 0.5rem;
+
+		svg {
+			padding-right: 0;
+		}
+	}
+	.about {
+		&__container {
+			margin-top: 2rem;
+			gap: 1rem;
+		}
+		&__list {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.apartments__wrapper {
+		grid-template-columns: 1fr;
+	}
+
+	.apartments {
+		.turn {
+			&__wrapper {
+				.turn__cursor {
+					position: absolute;
+					bottom: -6.8rem;
+					display: flex;
+					flex-direction: column;
+					gap: 1.62rem;
+					margin: auto;
+					left: 50% !important;
+					z-index: 2;
+				}
+
+				.cursor__descr {
+					position: relative;
+					border-radius: 1rem;
+					border: 1px solid rgba(139, 139, 139, 0.17);
+					background: #fff;
+					padding: 1.38rem 2.5rem;
+					left: -70%;
+					width: 100%;
+					transform: translateX(0%);
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: calc(100% + 1px);
+						left: 50%;
+						border-width: 8px;
+						border-style: solid;
+						border-color: transparent transparent rgba(139, 139, 139, 0.17) transparent; /* Змінюємо колір границі на чорний (#000) */
+						transform: translateX(-50%);
+					}
+				}
+
+				&::after {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 0.3125rem;
+					background: #f4f4f4;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+				}
+			}
+
+			&__block {
+				gap: 1rem;
+				grid-template-columns: 1fr;
+				padding: 1rem 2rem;
+
+				svg {
+					position: absolute;
+					left: 0;
+					right: 0;
+					margin: auto;
+					bottom: -2.7rem;
+					z-index: 2;
+				}
+
+				&::after {
+					content: "";
+					display: block;
+					width: 0.3125rem;
+					height: 2.4375rem;
+					background: #f4f4f4;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: -2.4375rem;
+					margin: auto;
+				}
+			}
+		}
+	}
+	.plan {
+		&__wrapper {
+			margin-top: 8rem;
+		}
+		&__label {
+			max-width: 2rem;
+			left: 2rem;
+		}
+		&__cursor {
+			max-width: 2rem;
+		}
+		&__info {
+			flex-direction: column;
+			padding: 1rem;
+			top: 10%;
+			left: 10%;
+			right: 10%;
+			bottom: 10%;
+			transform: translate(0);
+			gap: 0.5rem;
+		}
+	}
+	.tabs {
+		grid-template-columns: 1fr;
+		margin-top: 2rem;
+		&__header {
+			padding-right: 3rem;
+		}
+
+		&__wrapper {
+			height: 18rem;
+		}
+	}
+	.record {
+		&__title {
+			text-align: center;
+		}
+		&__wrapper {
+			input {
+				width: 100%;
+			}
+		}
+	}
+
+	.footer-contacts {
+		&__wrapper {
+			grid-template-columns: 1fr;
+		}
+
+		&__contacts {
+			gap: 1rem;
+		}
+
+		&__map {
+			min-height: 20rem;
+		}
+	}
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+	.apartments {
+		.turn {
+			&__wrapper {
+				.turn__cursor {
+					bottom: -5.8rem;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+body {
+	font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+	//overflow-x: hidden;
+	position: relative;
+}
+
+.container {
+	//width: 100%;
+	max-width: 1476px;
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+a {
+	text-decoration: none;
+	color: $black_color;
+}
+
+.button {
+	border-radius: 0.5rem;
+	background: $black_color;
+	color: $white_color;
+	display: flex;
+	gap: 0.5rem;
+}
