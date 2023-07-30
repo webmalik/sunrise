@@ -159,10 +159,89 @@ export function gallery() {
 	});
 }
 
-export function sticky() {
-	window.addEventListener('scroll', function () {
-		$('header').toggleClass('sticky', window.scrollY > 0);
-	});
+
+export function nav_genplan() {
+	// Функція для додавання або видалення класу
+	function toggleClass(element, className) {
+		if (element.classList.contains(className)) {
+			element.classList.remove(className);
+		} else {
+			element.classList.add(className);
+		}
+	}
+
+	// Функція, яка обробляє клік на елементі аккордеону
+	function handleAccordionClick(event) {
+		event.preventDefault();
+		const listItem = event.currentTarget.nextElementSibling;
+		const dataItem = listItem.getAttribute("data-item");
+		toggleClass(listItem, "active");
+
+		// Згортаємо/розгортаємо аккордеони в інших елементах
+		const otherListItems = document.querySelectorAll(".genplan__list .genplan__item");
+		otherListItems.forEach((item) => {
+			if (item.getAttribute("data-item") !== dataItem) {
+				item.classList.remove("active");
+			}
+		});
+
+		// Знаходимо відповідне зображення та змінюємо його видимість
+		const images = document.querySelectorAll(".genplan__image-wrap");
+		images.forEach((image) => {
+			if (image.getAttribute("data-item") === dataItem) {
+				image.classList.add("active");
+			} else {
+				image.classList.remove("active");
+			}
+		});
+	}
+
+	// Функція для додавання обробника кліку на елементи аккордеону
+	function addAccordionEventHandlers() {
+		const dropdownLinks = document.querySelectorAll(".genplan__menu-header");
+		dropdownLinks.forEach((link) => {
+			link.addEventListener("click", handleAccordionClick);
+		});
+	}
+
+	// Функція для зміни зображень
+	function changeImages() {
+		const menuItems = document.querySelectorAll(".genplan__item");
+		const imageWraps = document.querySelectorAll(".genplan__image-wrap");
+
+		// Функція для зміни активного стану пунктів меню і зображень
+		function setActiveItem(itemIndex) {
+			menuItems.forEach((item, index) => {
+				if (index === itemIndex) {
+					item.classList.add("active");
+					imageWraps[index].classList.add("active");
+				} else {
+					item.classList.remove("active");
+					imageWraps[index].classList.remove("active");
+				}
+			});
+		}
+
+		// Функція, яка обробляє клік на елементі аккордеону
+		function handleAccordionClick(event) {
+			event.preventDefault();
+			const clickedItem = event.target.closest(".genplan__item");
+			if (clickedItem) {
+				const dataItem = clickedItem.getAttribute("data-item");
+				const itemIndex = parseInt(dataItem) - 1;
+				setActiveItem(itemIndex);
+			}
+		}
+
+		// Додавання обробника подій на пункти меню
+		menuItems.forEach((item) => {
+			item.addEventListener("click", handleAccordionClick);
+		});
+	}
+
+	// Виклик обох функцій
+	addAccordionEventHandlers();
+	changeImages();
 }
 
 export function pageNav() {
