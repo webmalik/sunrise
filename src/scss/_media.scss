@@ -217,6 +217,12 @@
 			min-height: 20rem;
 		}
 	}
+	.gallery {
+		padding-top: 3rem;
+		&__wrapper {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 }
 
 @include media-width($sm) {
@@ -441,6 +447,11 @@
 
 		&__map {
 			min-height: 20rem;
+		}
+	}
+	.gallery {
+		&__wrapper {
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 }

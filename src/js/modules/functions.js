@@ -142,6 +142,23 @@ export function about_gallery() {
 	});
 }
 
+export function gallery() {
+
+	Fancybox.bind('[data-fancybox="gallery"]', {
+		toolbar: "auto",
+		loop: true,
+		animationEffect: "zoom-in-out",
+		transitionEffect: "fade",
+		buttons: ["zoom", "slideShow", "fullScreen", "thumbs", "close"],
+		Thumbs: {
+			hideOnClose: true,
+		},
+		touch: {
+			vertical: false,
+		},
+	});
+}
+
 export function sticky() {
 	window.addEventListener('scroll', function () {
 		$('header').toggleClass('sticky', window.scrollY > 0);
